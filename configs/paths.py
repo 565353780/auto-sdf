@@ -18,3 +18,6 @@ elif hostname == 'euclid':
     if username == 'yenchi':
         dataroot = '/data/yenchi/generative_transformers/data'
         logroot = '/data/yenchi/generative_transformers/logs'
+elif username == 'chli':
+    dataroot = '/home/chli/github/ASDF/auto-sdf/output'
+    logroot = '/home/chli/github/ASDF/auto-sdf/logs'

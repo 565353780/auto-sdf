@@ -1,7 +1,7 @@
 import h5py
 import trimesh
 import numpy as np
-import marching_cubes as mcubes
+import marchingcubes as mcubes
 import einops
 from einops import rearrange, repeat
 from termcolor import cprint

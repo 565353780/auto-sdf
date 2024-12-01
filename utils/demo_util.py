@@ -99,24 +99,23 @@ def get_shape_comp_dset(opt):
     
     
 def get_shape_comp_model(opt):
-    
     # load tf stuff
     opt.model='rand_tf'
     opt.tf_cfg='configs/rand_tf_snet_code.yaml'
     opt.ckpt = 'saved_ckpt/rand_tf-snet_code-all-LR1e-4-clean-epoch200.pth'
-    
+
     # load vq stuff
     opt.vq_model='pvqvae'
     opt.vq_cfg='configs/pvqvae_snet.yaml'
     opt.vq_ckpt='saved_ckpt/pvqvae-snet-all-LR1e-4-T0.2-rerun-epoch140.pth'
-    
+
     ### opt.vq_dset='sdf_code' # original
     opt.vq_dset='snet'
 
     model = create_model(opt)
     print(f'[*] "{opt.model}" initialized.')
     model.load_ckpt(opt.ckpt)
-        
+
     return model
 
 def get_pix3d_img_dset(opt):
